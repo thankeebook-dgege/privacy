@@ -7,7 +7,7 @@ title: ThankeeBook — Политика приватности
 
 Действует с 24 сентября 2026 года.
 Приложение: ThankeeBook (`com.thankeebook.app`).
-Кто отвечает за данные: [ФИО или наименование ИП], Армения.
+Кто отвечает за данные: Даниелов Альберт Варданович, Армения.
 Связаться: thankeebook@gmail.com
 
 Этот документ описывает то, что приложение делает на самом деле. Всё,
@@ -177,7 +177,7 @@ thankeebook@gmail.com
 
 Effective 24 September 2026.
 App: ThankeeBook (`com.thankeebook.app`).
-Data controller: [full legal name], Armenia.
+Data controller: Albert Danielov, Armenia.
 Contact: thankeebook@gmail.com
 
 This document describes what the app actually does. Everything here can
