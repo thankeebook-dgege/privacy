@@ -23,8 +23,12 @@ title: ThankeeBook — Политика приватности
   сервер само по себе.
 - На сервер что-то отправляется **только когда вы сами нажали
   ИИ-функцию**, и только то, что нужно для ответа.
-- **Регистрации нет.** Ни почты, ни имени, ни телефона. Приложению
-  выдаётся безличный номер, чтобы считать лимиты и подписку.
+- **Вход не обязателен.** Без него приложению выдаётся безличный
+  номер, и этого достаточно для всего, кроме одного: подписка окажется
+  привязана к телефону, а не к вам.
+- **Если вы войдёте через Google**, мы получим почту, имя и ссылку на
+  фото профиля. Только это и только для того, чтобы подписка была
+  вашей, а не телефона.
 - **Рекламы нет. Счётчиков посещаемости нет. Данные никому не
   продаются.**
 
@@ -69,12 +73,21 @@ title: ThankeeBook — Политика приватности
 
 ## Что хранится на сервере
 
-Сервер (Supabase) хранит по каждому безличному номеру:
+Сервер (Supabase) хранит по каждому номеру:
 
 - состояние подписки и дату её окончания;
 - счётчики обращений за минуту, сутки и месяц;
 - потраченную сумму за сутки, в центах;
 - отметки о нарушениях и блокировках, если они были.
+
+Если вы вошли через Google, к этому добавляется то, что Google
+сообщает о вашем аккаунте: **почта, имя и ссылка на фото профиля**.
+Пароль мы не видим никогда: вход происходит на стороне Google, а к нам
+приходит только подтверждение, что это вы.
+
+Вход **не заводит вторую запись**: Google-аккаунт привязывается к тому
+же номеру, под которым телефон ходил до входа. Поэтому подписка и
+счётчики при входе не теряются.
 
 **Содержимое ваших запросов на сервере не сохраняется.** Оно проходит
 через него к модели и возвращается вам ответом. В журналы сервера
@@ -130,16 +143,22 @@ Android-устройств это служба Google, и она может об
 
 - **На телефоне:** удалить приложение или очистить его данные в
   настройках Android. Этого достаточно, чтобы не осталось ничего.
-- **На сервере:** напишите на thankeebook@gmail.com и приложите номер
-  устройства (он показан в приложении, в разделе «О приложении»).
-  Строки удаляются в течение 30 дней.
+- **На сервере, если вы входили через Google:** напишите на
+  thankeebook@gmail.com с той же почты. Этого достаточно, чтобы вас
+  опознать.
+- **На сервере, если вы не входили:** приложите номер устройства, он
+  показан в приложении, в разделе «О приложении». Других примет у
+  безличной записи нет.
 
-**Важная оговорка.** Вход безличный, поэтому восстановить доступ к
-серверной строке по почте или паролю нельзя. Если вы удалите приложение
-и поставите заново, телефон получит новый номер, а старая строка
-останется без владельца и будет удалена по сроку хранения. Пока в
-приложении нет настоящего входа, оплаченную подписку при переустановке
-можно потерять — мы это знаем и меняем.
+Строки удаляются в течение 30 дней.
+
+**Важная оговорка про вход.** Пока вы не вошли, запись на сервере
+безличная: восстановить к ней доступ по почте нельзя. Удалите
+приложение и поставьте заново — телефон получит новый номер, а старая
+запись останется без владельца и будет удалена по сроку хранения.
+**Поэтому подписку стоит покупать после входа, а не до.** Если вы
+вошли, подписка привязана к вашему Google-аккаунту и переживает и
+переустановку, и смену телефона.
 
 ## Дети
 
@@ -179,9 +198,12 @@ repository and shown to store reviewers on request.
   itself.
 - Something is sent to the server **only when you press an AI feature**,
   and only what is needed to answer.
-- **There is no sign-up.** No email, no name, no phone number. The app
-  is given an anonymous number so limits and subscription can be
-  counted.
+- **Signing in is optional.** Without it the app is given an anonymous
+  number, which is enough for everything but one thing: your
+  subscription would belong to the phone rather than to you.
+- **If you sign in with Google**, we receive your email address, your
+  name and a link to your profile picture. That is all of it, and it
+  is there so the subscription is yours and not your phone's.
 - **No ads. No analytics. Your data is not sold to anyone.**
 
 ---
@@ -226,12 +248,21 @@ page copies, reminders, your PIN, or anything else on the phone.
 
 ## What the server stores
 
-The server (Supabase) stores, per anonymous number:
+The server (Supabase) stores, per number:
 
 - subscription status and expiry date;
 - request counters per minute, day and month;
 - the amount spent today, in cents;
 - abuse strikes and blocks, if any occurred.
+
+If you signed in with Google, this also holds what Google tells us
+about your account: **your email address, your name and a link to your
+profile picture**. We never see your password: the sign-in happens on
+Google's side, and only a confirmation that it is you reaches us.
+
+Signing in **does not create a second record**: the Google account is
+attached to the same number the phone used before. Your subscription
+and counters are not lost when you sign in.
 
 **The contents of your requests are not stored on the server.** They
 pass through it to the model and come back as an answer. Server logs
@@ -286,16 +317,22 @@ the app only ever sees the file you chose.
 
 - **On the phone:** uninstall the app, or clear its data in Android
   settings. That is enough to leave nothing behind.
-- **On the server:** write to thankeebook@gmail.com with your device
-  number (shown in the app under "About"). Rows are deleted within
-  30 days.
+- **On the server, if you signed in with Google:** write to
+  thankeebook@gmail.com from that same address. That is enough to
+  identify you.
+- **On the server, if you did not sign in:** include your device
+  number, shown in the app under "About". An anonymous record has no
+  other distinguishing mark.
 
-**An important caveat.** Sign-in is anonymous, so server rows cannot be
-recovered by email or password. If you uninstall and reinstall, the
-phone receives a new number, and the old row is left without an owner
-and removed when its retention period ends. Until the app has a real
-sign-in, a paid subscription can be lost on reinstall. We know this and
-are changing it.
+Rows are deleted within 30 days.
+
+**An important caveat about signing in.** Until you sign in, your
+server record is anonymous and cannot be recovered by email. Uninstall
+and reinstall, and the phone receives a new number while the old record
+is left without an owner and removed when its retention period ends.
+**So buy the subscription after signing in, not before.** Once you have
+signed in, the subscription belongs to your Google account and survives
+both a reinstall and a new phone.
 
 ## Children
 
