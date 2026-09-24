@@ -5,7 +5,7 @@ title: ThankeeBook — Политика приватности
 
 # Политика приватности ThankeeBook
 
-Действует с 24 сентября 2026 года.
+Действует с 25 сентября 2026 года.
 Приложение: ThankeeBook (`com.thankeebook.app`).
 Кто отвечает за данные: Даниелов Альберт Варданович, Армения.
 Связаться: thankeebook@gmail.com
@@ -18,49 +18,70 @@ title: ThankeeBook — Политика приватности
 
 ## Коротко
 
-- Всё сохранённое лежит **на вашем телефоне**. Ссылки, заметки, папки,
-  сохранённые копии статей, обложки — ничего из этого не уходит на
-  сервер само по себе.
-- На сервер что-то отправляется **только когда вы сами нажали
-  ИИ-функцию**, и только то, что нужно для ответа.
 - **Осмотреться можно без входа.** Открыть приложение, полистать,
   понять, нужно ли оно вам, — аккаунт для этого не нужен.
 - **Вход нужен, чтобы что-то создавать:** сохранить ссылку, завести
   папку, написать заметку, перенести коллекцию, воспользоваться ИИ.
-- **Вход только через Google.** Мы получаем почту, имя и ссылку на
-  фото профиля. Больше ничего, и пароль мы не видим никогда.
-- **Безличных записей у нас нет.** Раньше приложение входило анонимно,
-  и подписка оказывалась привязана к телефону: переустановил — потерял
-  оплаченное. Теперь она привязана к вашему Google-аккаунту и
-  переживает и переустановку, и смену телефона.
+- **Вход только через Google.** Мы получаем почту, имя и ссылку на фото
+  профиля. Пароль мы не видим никогда.
+- **Сохранённое хранится и на телефоне, и на нашем сервере.** Иначе оно
+  не пережило бы переустановку приложения и не перешло бы на новый
+  телефон. Обмен идёт сам, без вашего нажатия.
 - **Рекламы нет. Счётчиков посещаемости нет. Данные никому не
   продаются.**
 
 ---
 
+## Что уходит на наш сервер
+
+Сохранённое привязано к вашему аккаунту, а не к телефону, и для этого
+приложение отправляет его нам. Обмен происходит **сам** — при открытии
+приложения и при возвращении в него, — а не по нажатию кнопки.
+
+Отправляется:
+
+| Что | Подробнее |
+|---|---|
+| Папки | название, заметка к папке, метки, цвет, значок, порядок, вложенность |
+| Записи | заголовок, ссылка, ваша заметка, метки, тип, порядок, избранное, «посмотреть позже», архив |
+| Ответы ИИ | краткое описание, результат распознавания музыки |
+| Текст сохранённых копий статей | сам текст, без картинок |
+| Напоминания | дата и время, которые вы поставили |
+| Часть настроек | оформление, шрифт, выбранная модель, режимы вида и сортировки, имя и @юзернейм |
+
+**Про закрытые PIN-ом папки скажем прямо.** Их содержимое **тоже
+уходит на сервер и лежит там в открытом виде.** PIN закрывает их в
+приложении на вашем телефоне; он не шифрует ни файлы, ни серверную
+копию. Разработчик технически может прочитать содержимое любой папки,
+включая закрытую. Если вы храните что-то, чего не должен видеть никто,
+кроме вас, — этому приложению такое доверять не стоит.
+
+**Не уходит никогда:**
+
+- отпечаток PIN-кода и счётчик неудачных попыток;
+- история поиска;
+- сами картинки: обложки и картинки в копиях статей остаются на
+  телефоне;
+- содержимое других приложений и телефона.
+
 ## Что остаётся только на телефоне
 
-Приложение хранит в своей внутренней памяти:
-
-- сохранённые ссылки, видео, музыку, статьи и заметки;
-- папки, метки, избранное, «посмотреть позже», архив;
-- сохранённые копии страниц и обложки;
-- напоминания;
-- настройки: язык, оформление, шрифт, выбранная модель;
-- отпечаток PIN-кода, если вы его поставили.
-
-Эти данные не копируются на сервер и недоступны разработчику. Они
-исчезают, когда вы удаляете приложение или очищаете его данные.
+- отпечаток PIN-кода (PBKDF2, 120 000 повторений, случайная соль);
+- история поиска;
+- обложки и картинки сохранённых статей;
+- ежедневные резервные копии — они лежат во внутренней памяти
+  приложения, недоступной другим программам, и никуда не отправляются
+  сами;
+- язык интерфейса и служебные отметки вроде «видел приветствие».
 
 **Про PIN честно.** PIN закрывает папки и записи внутри приложения и
-хранится не как есть, а как отпечаток (PBKDF2, 120 000 повторений,
-со случайной солью). Но он **не шифрует файлы на телефоне**. Человек с
-разблокированным телефоном и техническими навыками до файлов
-доберётся. PIN защищает от чужого взгляда, а не от криминалиста.
+хранится не как есть, а как отпечаток. Но он **не шифрует файлы на
+телефоне и не скрывает содержимое от нас**. PIN защищает от чужого
+взгляда в ваш телефон, а не от криминалиста и не от разработчика.
 
-## Что отправляется на сервер и когда
+## Что уходит поставщикам ИИ
 
-Только по вашему нажатию на одну из ИИ-функций. Отправляется:
+Только когда вы сами нажали ИИ-функцию. Отправляется:
 
 | Функция | Что уходит |
 |---|---|
@@ -69,91 +90,90 @@ title: ThankeeBook — Политика приватности
 | Проверка фактов | ссылка, заголовок, ваша заметка |
 | Определение музыки | ссылка на ролик |
 
-Вместе с этим уходят: номер вашей записи на сервере, название
-выбранной модели и язык приложения.
-
-Не уходит никогда: содержимое других записей, список папок, сохранённые
-копии страниц, напоминания, PIN, содержимое телефона.
-
-## Что хранится на сервере
-
-Сервер (Supabase) хранит по каждому номеру:
-
-- состояние подписки и дату её окончания;
-- счётчики обращений за минуту, сутки и месяц;
-- потраченную сумму за сутки, в центах;
-- отметки о нарушениях и блокировках, если они были.
-
-Если вы вошли через Google, к этому добавляется то, что Google
-сообщает о вашем аккаунте: **почта, имя и ссылка на фото профиля**.
-Пароль мы не видим никогда: вход происходит на стороне Google, а к нам
-приходит только подтверждение, что это вы.
-
-Один и тот же Google-аккаунт всегда даёт одну и ту же запись, в том
-числе на новом телефоне. Поэтому подписка не теряется ни при
-переустановке, ни при смене устройства.
-
-**Содержимое ваших запросов на сервере не сохраняется.** Оно проходит
-через него к модели и возвращается вам ответом. В журналы сервера
-пишутся только сообщения об ошибках, без текста запроса.
-
-## Кому данные передаются дальше
-
-Чтобы ИИ-функции работали, текст запроса уходит поставщику модели.
-Сейчас это:
-
-- **Google** (модель Gemini, в том числе поиск по открытым источникам
-  для проверки фактов);
-- **Mistral AI**.
-
-Если позже появится определение музыки, ссылка на ролик будет уходить
-в **AudD**.
+Сейчас подключены **Google (модель Gemini, в том числе поиск по
+открытым источникам)** и **Mistral AI**. В приложении показывается
+выбор из шести моделей, но те, что не подключены, не используются: если
+выбранной модели нет, отвечает подключённая. Если позже появятся
+остальные — Anthropic, OpenAI, DeepSeek, xAI — или распознавание музыки
+через AudD, этот список будет обновлён до того, как они заработают.
 
 К этим компаниям применяются их собственные правила обработки данных.
-Мы передаём им только то, что перечислено в таблице выше.
 
-Сервер и база данных размещены в **Supabase**.
+**Содержимое ваших ИИ-запросов на нашем сервере не сохраняется.** Оно
+проходит через него к модели и возвращается ответом. В журналы сервера
+пишутся только сообщения об ошибках, без текста запроса.
 
-Никому другому данные не передаются. Не продаются, не обмениваются, не
-используются для рекламы.
+## Что уходит чужим сайтам
+
+Чтобы показать обложку и название ролика, приложение обращается к
+самому сайту, откуда ссылка: **YouTube, TikTok, Vimeo** и другим. Туда
+уходит ваша ссылка целиком и ваш адрес в интернете. То же происходит
+при проверке, жива ли ссылка, и при сохранении копии статьи — тогда
+запрос идёт на сайт статьи.
+
+Эти обращения делаются приложением сами, при открытии, а не по вашему
+нажатию. Сайт видит обычный запрос с вашего телефона.
+
+## Что ещё хранится на сервере
+
+По каждому аккаунту:
+
+- почта, имя и ссылка на фото профиля из Google;
+- состояние подписки и дата её окончания;
+- счётчики обращений к ИИ за минуту, сутки и месяц;
+- потраченная на модели сумма за сутки, в центах;
+- отметки о нарушениях и блокировках, если они были. Если владелец
+  закрыл доступ, почта попадает в отдельный список и остаётся там до
+  снятия блокировки.
 
 ## Разрешения, которые просит приложение
 
 | Разрешение | Зачем |
 |---|---|
-| Интернет | ИИ-функции и загрузка обложек |
+| Интернет | обмен с сервером, ИИ-функции, обложки |
 | Микрофон | голосовой ввод заметки и голосовой поиск |
 | Уведомления | напоминания, которые вы сами поставили |
-| Запуск после перезагрузки | чтобы поставленные напоминания пережили перезагрузку телефона |
+| Запуск после перезагрузки | чтобы напоминания пережили перезагрузку |
 
-**Про голосовой ввод честно.** Звук мы не получаем и не храним: приложение
-отдаёт его системному распознавателю вашего телефона. На большинстве
-Android-устройств это служба Google, и она может обрабатывать запись на
-своих серверах по своим правилам. К нам приходит только готовый текст, и
-только в то поле, куда вы диктовали.
+**Про голосовой ввод честно.** Звук мы не получаем и не храним:
+приложение отдаёт его системному распознавателю вашего телефона. На
+большинстве Android-устройств это служба Google, и она может
+обрабатывать запись на своих серверах по своим правилам. К нам приходит
+только готовый текст.
 
 Доступа к контактам, местоположению, звонкам, СМС и всей галерее
 приложение не просит. Картинку для папки вы выбираете через системное
-окно выбора, и приложение видит только выбранный файл.
+окно, и приложение видит только выбранный файл.
 
 ## Сколько это хранится
 
 - На телефоне — пока вы не удалите запись или приложение.
+- На сервере — пока вы не удалите запись или аккаунт.
+- Удалённая запись: её содержимое **стирается сразу**, а сама строка
+  остаётся пустой отметкой «удалено» — она нужна, чтобы удаление
+  доехало до других ваших устройств.
 - Счётчики за минуту и сутки — сменяются следующим периодом.
 - Месячные счётчики и суммы расхода — до 13 месяцев, для учёта.
-- Блокировки — до окончания срока, после чего снимаются сами.
+- Блокировки — до окончания срока или до снятия.
 
 ## Как удалить свои данные
 
-- **На телефоне:** удалить приложение или очистить его данные в
-  настройках Android. Этого достаточно, чтобы не осталось ничего.
-- **На сервере:** напишите на thankeebook@gmail.com с той же почты,
-  которой входили. Этого достаточно, чтобы вас опознать. Если вы ИИ не
-  пользовались, то и записи на сервере у вас нет: заводить её без
-  входа приложение не умеет.
+**В приложении:** Профиль → Личные данные → внизу «Удалить аккаунт».
+Нужно провести ползунок и вписать фразу — это защита от случайного
+нажатия. Удаляется всё: запись на сервере со всеми папками, ссылками и
+заметками, и всё сохранённое на этом телефоне.
 
-Строки удаляются в течение 30 дней. Номер вашей записи всегда можно
-посмотреть в приложении, в разделе «О приложении».
+**Письмом:** напишите на thankeebook@gmail.com с той же почты, которой
+входили. Строки удаляются в течение 30 дней.
+
+Две оговорки, чтобы не было неожиданностей:
+
+1. Удаление стирает данные **с сервера и с того телефона, на котором вы
+   его нажали**. Если приложение установлено на втором телефоне, там
+   останется местная копия, пока вы не удалите приложение или не
+   очистите его данные в настройках Android.
+2. Если вы входом не пользовались вовсе, записи на сервере у вас нет:
+   без входа приложение её не заводит.
 
 ## Дети
 
@@ -175,7 +195,7 @@ thankeebook@gmail.com
 
 # ThankeeBook Privacy Policy
 
-Effective 24 September 2026.
+Effective 25 September 2026.
 App: ThankeeBook (`com.thankeebook.app`).
 Data controller: Albert Danielov, Armenia.
 Contact: thankeebook@gmail.com
@@ -188,50 +208,72 @@ repository and shown to store reviewers on request.
 
 ## In short
 
-- Everything you save stays **on your phone**. Links, notes, folders,
-  saved copies of articles, thumbnails — none of it leaves the device by
-  itself.
-- Something is sent to the server **only when you press an AI feature**,
-  and only what is needed to answer.
 - **You can look around without signing in.** Opening the app, browsing
   it and deciding whether you want it needs no account.
 - **Signing in is needed to create anything:** saving a link, making a
   folder, writing a note, importing a collection, using the AI.
 - **Signing in is through Google only.** We receive your email address,
-  your name and a link to your profile picture. Nothing else, and we
-  never see your password.
-- **We keep no anonymous records.** The app used to sign in
-  anonymously, which tied the subscription to the phone: reinstall and
-  you lost what you paid for. It is now tied to your Google account and
-  survives both a reinstall and a new phone.
+  your name and a link to your profile picture. We never see your
+  password.
+- **What you save is kept both on your phone and on our server.**
+  Otherwise it would not survive a reinstall and would not follow you to
+  a new phone. The exchange happens by itself, without you pressing
+  anything.
 - **No ads. No analytics. Your data is not sold to anyone.**
 
 ---
 
+## What goes to our server
+
+What you save belongs to your account rather than to your phone, and for
+that the app sends it to us. The exchange happens **on its own** — when
+the app opens and when you return to it — not on a button press.
+
+What is sent:
+
+| What | In detail |
+|---|---|
+| Folders | name, folder note, tags, colour, icon, order, nesting |
+| Entries | title, link, your note, tags, type, order, favourite, watch later, archive |
+| AI answers | the short summary, the music recognition result |
+| The text of saved article copies | the text itself, without images |
+| Reminders | the date and time you set |
+| Some settings | theme, font, chosen model, view and sort modes, name and @username |
+
+**About PIN-locked folders, plainly.** Their contents **also go to the
+server and are stored there in the clear.** The PIN locks them inside
+the app on your phone; it encrypts neither the files nor the server
+copy. The developer can technically read the contents of any folder,
+locked ones included. If you keep something nobody but you should see,
+this app is not the place for it.
+
+**Never sent:**
+
+- the fingerprint of your PIN and the failed-attempt counter;
+- your search history;
+- the images themselves: thumbnails and pictures inside saved articles
+  stay on the phone;
+- anything else on your phone.
+
 ## What stays on the phone only
 
-The app keeps in its own private storage:
-
-- saved links, videos, music, articles and notes;
-- folders, tags, favourites, watch later, archive;
-- saved page copies and thumbnails;
-- reminders;
-- settings: language, theme, font, chosen model;
-- the fingerprint of your PIN, if you set one.
-
-None of this is copied to the server, and the developer cannot see it.
-It disappears when you uninstall the app or clear its data.
+- the fingerprint of your PIN (PBKDF2, 120,000 rounds, random salt);
+- your search history;
+- thumbnails and the pictures of saved articles;
+- the daily backups — they live in the app's own private storage, which
+  other apps cannot read, and are never sent anywhere by themselves;
+- the interface language and housekeeping flags such as "has seen the
+  welcome screen".
 
 **An honest note about the PIN.** The PIN locks folders and entries
-inside the app and is stored as a fingerprint, not as text (PBKDF2,
-120,000 rounds, random salt). But it **does not encrypt the files on
-your phone**. Someone holding an unlocked phone with the right technical
-skills can reach them. The PIN protects against a passing glance, not
-against forensics.
+inside the app and is stored as a fingerprint, not as text. But it
+**does not encrypt the files on your phone and does not hide anything
+from us**. It protects against someone glancing at your phone, not
+against forensics and not against the developer.
 
-## What is sent to the server, and when
+## What goes to the AI providers
 
-Only when you press one of the AI features. What is sent:
+Only when you press an AI feature yourself:
 
 | Feature | What goes out |
 |---|---|
@@ -240,67 +282,56 @@ Only when you press one of the AI features. What is sent:
 | Fact check | link, title, your note |
 | Identify music | link to the video |
 
-Along with it: the number of your record on the server, the name of the
-chosen model and the app language.
+Connected today: **Google (the Gemini model, including search over open
+sources)** and **Mistral AI**. The app shows a choice of six models, but
+the ones that are not connected are not used: if the chosen model is
+absent, a connected one answers instead. Should the others — Anthropic,
+OpenAI, DeepSeek, xAI — or music recognition through AudD be switched
+on later, this list will be updated before they start working.
 
-Never sent: the contents of your other entries, your folder list, saved
-page copies, reminders, your PIN, or anything else on the phone.
+Those companies' own data practices apply to what they receive.
 
-## What the server stores
-
-The server (Supabase) stores, per number:
-
-- subscription status and expiry date;
-- request counters per minute, day and month;
-- the amount spent today, in cents;
-- abuse strikes and blocks, if any occurred.
-
-If you signed in with Google, this also holds what Google tells us
-about your account: **your email address, your name and a link to your
-profile picture**. We never see your password: the sign-in happens on
-Google's side, and only a confirmation that it is you reaches us.
-
-The same Google account always gives the same record, including on a
-new phone. That is why the subscription is not lost on a reinstall or
-when you change devices.
-
-**The contents of your requests are not stored on the server.** They
+**The contents of your AI requests are not stored on our server.** They
 pass through it to the model and come back as an answer. Server logs
 contain error messages only, never the text of a request.
 
-## Who else receives data
+## What goes to other people's sites
 
-For the AI features to work, the text of a request goes to the model
-provider. Currently:
+To show a thumbnail and the title of a video, the app asks the site the
+link came from: **YouTube, TikTok, Vimeo** and others. Your full link
+and your internet address go there. The same happens when the app checks
+whether a link is still alive, and when it saves a copy of an article —
+then the request goes to the article's own site.
 
-- **Google** (the Gemini model, including search over open sources for
-  fact checking);
-- **Mistral AI**.
+These requests are made by the app itself, on opening, not on your
+button press. The site sees an ordinary request from your phone.
 
-If music identification ships later, the video link will go to **AudD**.
+## What else the server holds
 
-Those companies' own data practices apply to what they receive. We send
-them only what is listed in the table above.
+Per account:
 
-The server and database are hosted by **Supabase**.
-
-No one else receives your data. It is not sold, traded, or used for
-advertising.
+- your email address, name and profile picture link from Google;
+- subscription status and expiry date;
+- counters of AI requests per minute, day and month;
+- the amount spent on models today, in cents;
+- abuse strikes and blocks, if any occurred. If the owner closes your
+  access, your email goes on a separate list and stays there until the
+  block is lifted.
 
 ## Permissions the app asks for
 
 | Permission | Why |
 |---|---|
-| Internet | AI features and loading thumbnails |
+| Internet | syncing with the server, AI features, thumbnails |
 | Microphone | dictating a note and voice search |
 | Notifications | reminders you set yourself |
 | Start after reboot | so reminders survive a phone restart |
 
-**An honest note about voice input.** We never receive or store the audio:
-the app hands it to your phone's own speech recogniser. On most Android
-devices that is a Google service, and it may process the recording on
-Google's servers under Google's own terms. Only the finished text reaches
-us, and only in the field you dictated into.
+**An honest note about voice input.** We never receive or store the
+audio: the app hands it to your phone's own speech recogniser. On most
+Android devices that is a Google service, and it may process the
+recording on Google's servers under Google's own terms. Only the
+finished text reaches us.
 
 The app does not ask for contacts, location, calls, SMS, or your whole
 photo library. You pick a folder picture through the system picker, and
@@ -309,21 +340,32 @@ the app only ever sees the file you chose.
 ## How long this is kept
 
 - On the phone: until you delete the entry or the app.
+- On the server: until you delete the entry or your account.
+- A deleted entry: its contents are **erased at once**, and the row
+  stays behind as an empty "deleted" marker — needed so the deletion
+  reaches your other devices.
 - Minute and day counters: replaced by the next period.
 - Monthly counters and spend totals: up to 13 months, for accounting.
-- Blocks: until they expire, after which they lift themselves.
+- Blocks: until they expire or are lifted.
 
 ## How to delete your data
 
-- **On the phone:** uninstall the app, or clear its data in Android
-  settings. That is enough to leave nothing behind.
-- **On the server:** write to thankeebook@gmail.com from the same
-  address you signed in with. That is enough to identify you. If you
-  never used the AI features, there is no record of you on the server
-  at all: the app cannot create one without a sign-in.
+**In the app:** Profile → Personal details → "Delete account" at the
+bottom. You have to drag a slider and type a phrase — that is the guard
+against pressing it by accident. Everything goes: the server record with
+all folders, links and notes, and everything saved on that phone.
 
-Rows are deleted within 30 days. The number of your record is always
-visible in the app under "About".
+**By email:** write to thankeebook@gmail.com from the same address you
+signed in with. Rows are deleted within 30 days.
+
+Two caveats so nothing comes as a surprise:
+
+1. Deleting erases your data **from the server and from the phone you
+   pressed it on**. If the app is installed on a second phone, a local
+   copy remains there until you uninstall it or clear its data in
+   Android settings.
+2. If you never signed in, there is no record of you on the server at
+   all: the app does not create one without a sign-in.
 
 ## Children
 
