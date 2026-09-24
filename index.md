@@ -23,8 +23,10 @@ title: ThankeeBook — Политика приватности
   сервер само по себе.
 - На сервер что-то отправляется **только когда вы сами нажали
   ИИ-функцию**, и только то, что нужно для ответа.
-- **Вход нужен только для ИИ.** Всё остальное работает без него:
-  сохранения, папки, поиск, напоминания, копии статей.
+- **Осмотреться можно без входа.** Открыть приложение, полистать,
+  понять, нужно ли оно вам, — аккаунт для этого не нужен.
+- **Вход нужен, чтобы что-то создавать:** сохранить ссылку, завести
+  папку, написать заметку, перенести коллекцию, воспользоваться ИИ.
 - **Вход только через Google.** Мы получаем почту, имя и ссылку на
   фото профиля. Больше ничего, и пароль мы не видим никогда.
 - **Безличных записей у нас нет.** Раньше приложение входило анонимно,
@@ -191,8 +193,10 @@ repository and shown to store reviewers on request.
   itself.
 - Something is sent to the server **only when you press an AI feature**,
   and only what is needed to answer.
-- **Signing in is only needed for the AI features.** Everything else
-  works without it: saving, folders, search, reminders, page copies.
+- **You can look around without signing in.** Opening the app, browsing
+  it and deciding whether you want it needs no account.
+- **Signing in is needed to create anything:** saving a link, making a
+  folder, writing a note, importing a collection, using the AI.
 - **Signing in is through Google only.** We receive your email address,
   your name and a link to your profile picture. Nothing else, and we
   never see your password.
