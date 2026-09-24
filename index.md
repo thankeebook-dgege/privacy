@@ -23,12 +23,14 @@ title: ThankeeBook — Политика приватности
   сервер само по себе.
 - На сервер что-то отправляется **только когда вы сами нажали
   ИИ-функцию**, и только то, что нужно для ответа.
-- **Вход не обязателен.** Без него приложению выдаётся безличный
-  номер, и этого достаточно для всего, кроме одного: подписка окажется
-  привязана к телефону, а не к вам.
-- **Если вы войдёте через Google**, мы получим почту, имя и ссылку на
-  фото профиля. Только это и только для того, чтобы подписка была
-  вашей, а не телефона.
+- **Вход нужен только для ИИ.** Всё остальное работает без него:
+  сохранения, папки, поиск, напоминания, копии статей.
+- **Вход только через Google.** Мы получаем почту, имя и ссылку на
+  фото профиля. Больше ничего, и пароль мы не видим никогда.
+- **Безличных записей у нас нет.** Раньше приложение входило анонимно,
+  и подписка оказывалась привязана к телефону: переустановил — потерял
+  оплаченное. Теперь она привязана к вашему Google-аккаунту и
+  переживает и переустановку, и смену телефона.
 - **Рекламы нет. Счётчиков посещаемости нет. Данные никому не
   продаются.**
 
@@ -65,8 +67,8 @@ title: ThankeeBook — Политика приватности
 | Проверка фактов | ссылка, заголовок, ваша заметка |
 | Определение музыки | ссылка на ролик |
 
-Вместе с этим уходят: безличный номер устройства, название выбранной
-модели и язык приложения.
+Вместе с этим уходят: номер вашей записи на сервере, название
+выбранной модели и язык приложения.
 
 Не уходит никогда: содержимое других записей, список папок, сохранённые
 копии страниц, напоминания, PIN, содержимое телефона.
@@ -85,9 +87,9 @@ title: ThankeeBook — Политика приватности
 Пароль мы не видим никогда: вход происходит на стороне Google, а к нам
 приходит только подтверждение, что это вы.
 
-Вход **не заводит вторую запись**: Google-аккаунт привязывается к тому
-же номеру, под которым телефон ходил до входа. Поэтому подписка и
-счётчики при входе не теряются.
+Один и тот же Google-аккаунт всегда даёт одну и ту же запись, в том
+числе на новом телефоне. Поэтому подписка не теряется ни при
+переустановке, ни при смене устройства.
 
 **Содержимое ваших запросов на сервере не сохраняется.** Оно проходит
 через него к модели и возвращается вам ответом. В журналы сервера
@@ -143,22 +145,13 @@ Android-устройств это служба Google, и она может об
 
 - **На телефоне:** удалить приложение или очистить его данные в
   настройках Android. Этого достаточно, чтобы не осталось ничего.
-- **На сервере, если вы входили через Google:** напишите на
-  thankeebook@gmail.com с той же почты. Этого достаточно, чтобы вас
-  опознать.
-- **На сервере, если вы не входили:** приложите номер устройства, он
-  показан в приложении, в разделе «О приложении». Других примет у
-  безличной записи нет.
+- **На сервере:** напишите на thankeebook@gmail.com с той же почты,
+  которой входили. Этого достаточно, чтобы вас опознать. Если вы ИИ не
+  пользовались, то и записи на сервере у вас нет: заводить её без
+  входа приложение не умеет.
 
-Строки удаляются в течение 30 дней.
-
-**Важная оговорка про вход.** Пока вы не вошли, запись на сервере
-безличная: восстановить к ней доступ по почте нельзя. Удалите
-приложение и поставьте заново — телефон получит новый номер, а старая
-запись останется без владельца и будет удалена по сроку хранения.
-**Поэтому подписку стоит покупать после входа, а не до.** Если вы
-вошли, подписка привязана к вашему Google-аккаунту и переживает и
-переустановку, и смену телефона.
+Строки удаляются в течение 30 дней. Номер вашей записи всегда можно
+посмотреть в приложении, в разделе «О приложении».
 
 ## Дети
 
@@ -198,12 +191,15 @@ repository and shown to store reviewers on request.
   itself.
 - Something is sent to the server **only when you press an AI feature**,
   and only what is needed to answer.
-- **Signing in is optional.** Without it the app is given an anonymous
-  number, which is enough for everything but one thing: your
-  subscription would belong to the phone rather than to you.
-- **If you sign in with Google**, we receive your email address, your
-  name and a link to your profile picture. That is all of it, and it
-  is there so the subscription is yours and not your phone's.
+- **Signing in is only needed for the AI features.** Everything else
+  works without it: saving, folders, search, reminders, page copies.
+- **Signing in is through Google only.** We receive your email address,
+  your name and a link to your profile picture. Nothing else, and we
+  never see your password.
+- **We keep no anonymous records.** The app used to sign in
+  anonymously, which tied the subscription to the phone: reinstall and
+  you lost what you paid for. It is now tied to your Google account and
+  survives both a reinstall and a new phone.
 - **No ads. No analytics. Your data is not sold to anyone.**
 
 ---
@@ -240,8 +236,8 @@ Only when you press one of the AI features. What is sent:
 | Fact check | link, title, your note |
 | Identify music | link to the video |
 
-Along with it: the anonymous device number, the name of the chosen model
-and the app language.
+Along with it: the number of your record on the server, the name of the
+chosen model and the app language.
 
 Never sent: the contents of your other entries, your folder list, saved
 page copies, reminders, your PIN, or anything else on the phone.
@@ -260,9 +256,9 @@ about your account: **your email address, your name and a link to your
 profile picture**. We never see your password: the sign-in happens on
 Google's side, and only a confirmation that it is you reaches us.
 
-Signing in **does not create a second record**: the Google account is
-attached to the same number the phone used before. Your subscription
-and counters are not lost when you sign in.
+The same Google account always gives the same record, including on a
+new phone. That is why the subscription is not lost on a reinstall or
+when you change devices.
 
 **The contents of your requests are not stored on the server.** They
 pass through it to the model and come back as an answer. Server logs
@@ -317,22 +313,13 @@ the app only ever sees the file you chose.
 
 - **On the phone:** uninstall the app, or clear its data in Android
   settings. That is enough to leave nothing behind.
-- **On the server, if you signed in with Google:** write to
-  thankeebook@gmail.com from that same address. That is enough to
-  identify you.
-- **On the server, if you did not sign in:** include your device
-  number, shown in the app under "About". An anonymous record has no
-  other distinguishing mark.
+- **On the server:** write to thankeebook@gmail.com from the same
+  address you signed in with. That is enough to identify you. If you
+  never used the AI features, there is no record of you on the server
+  at all: the app cannot create one without a sign-in.
 
-Rows are deleted within 30 days.
-
-**An important caveat about signing in.** Until you sign in, your
-server record is anonymous and cannot be recovered by email. Uninstall
-and reinstall, and the phone receives a new number while the old record
-is left without an owner and removed when its retention period ends.
-**So buy the subscription after signing in, not before.** Once you have
-signed in, the subscription belongs to your Google account and survives
-both a reinstall and a new phone.
+Rows are deleted within 30 days. The number of your record is always
+visible in the app under "About".
 
 ## Children
 
