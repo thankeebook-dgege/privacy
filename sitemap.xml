@@ -649,4 +649,7 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://thankeebook.com/ar/"/>
   </url>
   <url><loc>https://thankeebook.com/privacy/</loc></url>
+  <url><loc>https://thankeebook.com/terms/</loc></url>
+  <url><loc>https://thankeebook.com/delete-account/</loc></url>
+  <url><loc>https://thankeebook.com/credits/</loc></url>
 </urlset>

@@ -109,9 +109,16 @@
 <tr><td>Микрофон</td><td>голосовой ввод заметки и голосовой поиск</td></tr>
 <tr><td>Уведомления</td><td>напоминания, которые вы сами поставили</td></tr>
 <tr><td>Запуск после перезагрузки</td><td>чтобы напоминания пережили перезагрузку</td></tr>
+<tr><td>Вибрация</td><td>короткий отклик при напоминании</td></tr>
+<tr><td>Покупки в Google Play</td><td>оформление и проверка подписки</td></tr>
+<tr><td>Состояние сети</td><td>понять, есть ли интернет, прежде чем обращаться к серверу</td></tr>
 </tbody></table>
+<p>В списке разрешений установленного приложения видны ещё два: «биометрия» и «отпечаток пальца». Их объявляет встроенная библиотека входа через Google. Само приложение отпечаток не запрашивает, не получает и не хранит.</p>
 <p><strong>Про голосовой ввод честно.</strong> Звук мы не получаем и не храним: приложение отдаёт его системному распознавателю вашего телефона. На большинстве Android-устройств это служба Google, и она может обрабатывать запись на своих серверах по своим правилам. К нам приходит только готовый текст.</p>
 <p>Доступа к контактам, местоположению, звонкам, СМС и всей галерее приложение не просит. Картинку для папки вы выбираете через системное окно, и приложение видит только выбранный файл.</p>
+<h2>Кто хранит данные по нашему поручению</h2>
+<p>Сервер приложения работает на платформе <strong>Supabase</strong> (Supabase Inc.): там лежат база с вашими папками и записями и служба входа. Supabase обрабатывает данные по нашему поручению; для своих целей он их не использует.</p>
+<p>Оплату подписки проводит <strong>Google Play</strong>. Данные карты до нас не доходят: мы получаем только отметку о том, что подписка оплачена, и срок её действия.</p>
 <h2>Сколько это хранится</h2>
 <ul>
 <li>На телефоне - пока вы не удалите запись или приложение.</li>
@@ -129,6 +136,19 @@
 <li>Удаление стирает данные <strong>с сервера и с того телефона, на котором вы его нажали</strong>. Если приложение установлено на втором телефоне, там останется местная копия, пока вы не удалите приложение или не очистите его данные в настройках Android.</li>
 <li>Если вы входом не пользовались вовсе, записи на сервере у вас нет: без входа приложение её не заводит.</li>
 </ol>
+<h2>Ваши права</h2>
+<p>Вы можете в любой момент:</p>
+<ul>
+<li><strong>получить копию своих данных</strong>: Профиль → «Выгрузить всё файлом»;</li>
+<li><strong>исправить</strong> любую запись, папку или заметку прямо в приложении;</li>
+<li><strong>удалить</strong> аккаунт и всё сохранённое: как именно, написано в разделе выше;</li>
+<li><strong>выключить обмен с сервером</strong> в настройках синхронизации;</li>
+<li><strong>спросить нас</strong>, какие данные о вас лежат на сервере: напишите на <a href="mailto:thankeebook@gmail.com">thankeebook@gmail.com</a> с той же почты, которой входили. Отвечаем в течение 30 дней.</li>
+</ul>
+<p>Если вы считаете, что мы обращаемся с вашими данными неправильно, вы вправе пожаловаться в надзорный орган по защите данных своей страны.</p>
+<h2>Сайт thankeebook.com</h2>
+<p>На сайте нет cookie, счётчиков посещаемости, рекламы и форм: он ничего о вас не запоминает и ничего у вас не спрашивает. Поэтому на нём нет и окна с согласием на cookie: соглашаться не на что.</p>
+<p>Как любой сайт, он не может открыться, не узнав ваш адрес в интернете. Страницы лежат на GitHub Pages и идут через сеть Cloudflare; обе компании видят адрес и время обращения в своих технических журналах. Счётчик посещений Cloudflare на сайте выключен.</p>
 <h2>Дети</h2>
 <p>Приложение не предназначено для детей младше 13 лет и не собирает их данные намеренно. Если выяснится, что данные ребёнка попали на сервер, напишите нам, и мы их удалим.</p>
 <h2>Изменения</h2>
@@ -216,9 +236,16 @@ Contact: <a href="mailto:thankeebook@gmail.com">thankeebook@gmail.com</a></p>
 <tr><td>Microphone</td><td>dictating a note and voice search</td></tr>
 <tr><td>Notifications</td><td>reminders you set yourself</td></tr>
 <tr><td>Start after reboot</td><td>so reminders survive a phone restart</td></tr>
+<tr><td>Vibration</td><td>a short buzz when a reminder fires</td></tr>
+<tr><td>Google Play purchases</td><td>buying and verifying the subscription</td></tr>
+<tr><td>Network state</td><td>to see whether there is a connection before contacting the server</td></tr>
 </tbody></table>
+<p>The installed app lists two more permissions, "biometric" and "fingerprint". They are declared by the built-in Google sign-in library. The app itself never asks for, receives or stores a fingerprint.</p>
 <p><strong>An honest note about voice input.</strong> We never receive or store the audio: the app hands it to your phone's own speech recogniser. On most Android devices that is a Google service, and it may process the recording on Google's servers under Google's own terms. Only the finished text reaches us.</p>
 <p>The app does not ask for contacts, location, calls, SMS, or your whole photo library. You pick a folder picture through the system picker, and the app only ever sees the file you chose.</p>
+<h2>Who stores data on our behalf</h2>
+<p>The app's server runs on <strong>Supabase</strong> (Supabase Inc.): it holds the database with your folders and entries and the sign-in service. Supabase processes the data on our behalf and does not use it for its own purposes.</p>
+<p>Subscription payments are handled by <strong>Google Play</strong>. Card details never reach us: we only receive a record that the subscription is paid and when it expires.</p>
 <h2>How long this is kept</h2>
 <ul>
 <li>On the phone: until you delete the entry or the app.</li>
@@ -236,6 +263,19 @@ Contact: <a href="mailto:thankeebook@gmail.com">thankeebook@gmail.com</a></p>
 <li>Deleting erases your data <strong>from the server and from the phone you pressed it on</strong>. If the app is installed on a second phone, a local copy remains there until you uninstall it or clear its data in Android settings.</li>
 <li>If you never signed in, there is no record of you on the server at all: the app does not create one without a sign-in.</li>
 </ol>
+<h2>Your rights</h2>
+<p>At any time you can:</p>
+<ul>
+<li><strong>get a copy of your data</strong>: Profile → "Export everything to a file";</li>
+<li><strong>correct</strong> any entry, folder or note right in the app;</li>
+<li><strong>delete</strong> your account and everything saved: the section above says how;</li>
+<li><strong>switch off the exchange with the server</strong> in the sync settings;</li>
+<li><strong>ask us</strong> what data about you is on the server: write to <a href="mailto:thankeebook@gmail.com">thankeebook@gmail.com</a> from the address you signed in with. We reply within 30 days.</li>
+</ul>
+<p>If you believe we handle your data wrongly, you have the right to complain to the data protection authority of your country.</p>
+<h2>The thankeebook.com website</h2>
+<p>The website has no cookies, no analytics, no ads and no forms: it remembers nothing about you and asks you for nothing. That is why it has no cookie consent banner: there is nothing to consent to.</p>
+<p>Like any website, it cannot open without learning your internet address. The pages are hosted on GitHub Pages and served through the Cloudflare network; both companies see the address and the time of the request in their technical logs. Cloudflare's visitor counter is switched off for the site.</p>
 <h2>Children</h2>
 <p>The app is not intended for children under 13 and does not knowingly collect their data. If you believe a child's data reached the server, write to us and we will delete it.</p>
 <h2>Changes</h2>
@@ -250,8 +290,13 @@ Contact: <a href="mailto:thankeebook@gmail.com">thankeebook@gmail.com</a></p>
   <div class="wrap">
     <nav>
       <a href="/">ThankeeBook</a>
+      <a href="/privacy/">Политика · Privacy</a>
+      <a href="/terms/">Соглашение · Terms</a>
+      <a href="/delete-account/">Удаление аккаунта · Delete account</a>
+      <a href="/credits/">Фото · Photo credits</a>
       <a href="mailto:thankeebook@gmail.com">thankeebook@gmail.com</a>
     </nav>
+    <p>Danielov Albert Vardani, individual entrepreneur · Republic of Armenia · TIN 20421445</p>
     <p>© 2026 ThankeeBook</p>
   </div>
 </footer>
