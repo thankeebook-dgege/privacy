@@ -183,7 +183,7 @@ h2 { margin: 0 0 22px; font-size: clamp(2rem, 5.4vw, 3.6rem); line-height: 1.06;
 .claim em { font-style: normal; color: var(--gold); }
 
 .big3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 52px 40px; margin: 0 0 56px; padding: 0; list-style: none; }
-.big3 svg { width: 46px; height: 46px; fill: #f2679a; }
+.big3 svg { width: 46px; height: 46px; fill: var(--red); }
 .big3 li:nth-child(3n+2) svg { fill: var(--gold); }
 .big3 li:nth-child(3n) svg { fill: var(--saffron); }
 .also { margin: 0; font-size: 1.12rem; font-weight: 600; }
