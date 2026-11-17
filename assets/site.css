@@ -252,6 +252,8 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 16px;
 .g-gold { --glow: rgba(232, 143, 63, 0.36); }
 .extras li:nth-child(5) svg { fill: var(--saffron); } .extras li:nth-child(6) svg { fill: var(--sapphire); }
 .extras li:nth-child(7) svg { fill: var(--gold); } .extras li:nth-child(8) svg { fill: var(--emerald); }
+.extras li:nth-child(9) svg { fill: var(--amethyst); } .extras li:nth-child(10) svg { fill: var(--gold); }
+.extras li:nth-child(11) svg { fill: var(--sapphire); } .extras li:nth-child(12) svg { fill: var(--saffron); }
 
 /* ── Языки с другим письмом ───────────────────────────────────────────── */
 /* Арабский пишется справа налево. Название и телефон при этом остаются как
