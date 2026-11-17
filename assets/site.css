@@ -232,14 +232,19 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 16px;
   .cap { position: relative; left: auto; bottom: auto; margin: -70px 18px 0; max-width: none; }
   .cap h1 { max-width: none; font-size: clamp(0.82rem, 3.7vw, 1.05rem); }
   .flow, .feat, .big3 { grid-template-columns: 1fr; }
-  .big3 { gap: 34px; margin-bottom: 48px; }
-  .claim { margin-bottom: 44px; }
-  .flow { gap: 34px 0; padding-top: 40px; }
-  .feat { gap: 34px; padding: 40px 0; }
+  .big3 { gap: 26px; margin-bottom: 30px; }
+  .claim { margin-bottom: 28px; }
+  .flow { gap: 26px 0; padding-top: 28px; }
+  .feat { gap: 22px; padding: 24px 0; }
   .feat:nth-of-type(even) .say { order: 0; }
-  .extras { grid-template-columns: 1fr 1fr; }
-  section { padding: 70px 0; }
-  .sub { margin-bottom: 44px; }
+  .extras { grid-template-columns: 1fr 1fr; gap: 26px 20px; margin-top: 20px; padding-top: 30px; }
+  /* На телефоне отступы между разделами вдвое меньше, чем на большом
+     экране. Раньше между разделами было по 140 точек пустоты, и страница
+     на телефоне листалась «пролётами» (замечание владельца, 17 ноября
+     2026). */
+  section { padding: 40px 0; }
+  .sub { margin-bottom: 26px; }
+  .panel .small { margin-top: 20px; }
   .fl.i3, .fl.i7 { width: 56px; }
 }
 @keyframes lift-m { from { opacity: 0; translate: 0 50px; } to { opacity: 1; translate: 0 0; } }
